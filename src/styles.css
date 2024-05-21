@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar{
+display: flex;
+gap: 10px;
+a.active{
+    color: red;
+}
+}
