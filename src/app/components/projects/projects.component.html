@@ -1,0 +1,16 @@
+<div class="data-colums-container" >
+    <div  class="box" *ngFor="let project of projects">
+      <div class="project-img-container">
+        <img [src]="project.img" [alt]="project.name">
+      </div>
+     
+     <span>{{project.name}}</span> 
+    </div>
+    <div  class="box" >
+      <div class="project-img-container">
+        <fa-icon class="icon" [icon]="plusIcon"></fa-icon>
+      </div>
+     
+     <span>Create New</span> 
+    </div>
+  </div>

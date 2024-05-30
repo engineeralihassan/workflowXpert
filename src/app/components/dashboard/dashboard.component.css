@@ -1,0 +1,119 @@
+.page-content {
+    max-width: 100%;
+    background-color: #e8e8e9;
+    min-height: 100vh;
+    max-width: 100%;
+    width: calc(100% - 260px);
+  }
+
+  .user-details-container {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    max-width: 100%;
+   
+    .link {
+      color: #8c8c91;
+    }
+    .user-detail {
+      width: 100% !important;
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: #2676a5;
+      gap: 5px;
+      .user-profile-btn{
+        background-color: #5b2666 ;
+        color: #fff;
+      }
+      .user-profile-dropdown{
+
+        .dropdown-menu{
+          width: max-content !important;
+          padding: 10px 5px 20px 5px;
+          .user-profile-personal-information{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #f7f8f9;
+            width: 95%;
+            margin: auto;
+            width: auto !important;
+            .user-profile-image{
+              width: 60px;
+              height: 60px;
+              font-size: 1.5rem;
+              font-weight: 700;
+              background-color: #5b2666;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: #fff;
+              gap: 4px;
+            }
+            .user-information{
+              display: flex;
+              flex-direction: column;
+              color: #172b4d;
+              margin-left: 8px;
+              h4,p{
+                color: #172b4d;
+                margin:0;
+                padding: 0;
+              }
+            }
+          }
+          li:not(:first-child){
+            margin-top: 10px !important;
+            a{
+              color: black !important;
+              height: 40px !important;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              
+            }
+            fa-icon{
+              margin-right: 6px;
+            }
+            
+          }
+         
+         
+        }
+      }
+     
+  
+    }
+    border-bottom: 1px solid #e8e8e9;
+  }
+  .sidebar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    a {
+      text-transform: capitalize !important;
+    }
+  }
+  
+  .loader-menu-items{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff ;
+    background: #ffff !important;
+  }
+  .username-wellcome-text{
+    margin-top: 3rem;
+    margin-left: 3rem;
+  }
+  
+
+  
