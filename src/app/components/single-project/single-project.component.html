@@ -8,9 +8,38 @@
     <div class="task-category-box" *ngFor="let c of [1,2,3,4,5,6,7]">
        <p class="category-name">In Progress</p>
        <div class="tasks-container">
-        <app-skelton-loader></app-skelton-loader>
+
+    @if (isLoading){
+        <div class="data-loader-container">
+            <app-skelton-loader ></app-skelton-loader>
+        </div>
+        
+       
+    }
+    @else{
+
+        @for(
+     user of [1,2,3,4]; track $index
+){
+    <div class="task-box" >
+        <div class="task-upper-section">
+         <p>Stellar website Responsiveness (Footer Pages)</p> 
+         <span><fa-icon class="icon" [icon]="icons[0]"></fa-icon></span>
+        </div>
+        <div class="task-bottom-section">
+         <span class="task-number" title="VGDMS-34"><small> <fa-icon [icon]="icons[1]"></fa-icon></small> VGDMS-34</span>
+         <span class="assignee-name">A</span>
+        </div>
+ 
+ 
+         </div>
+}
+
+      
+    }
+        
+       
    
        </div>
-       
     </div>
 </div>
