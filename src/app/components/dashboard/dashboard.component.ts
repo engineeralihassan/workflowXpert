@@ -20,6 +20,8 @@ import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AlertModelComponent } from '../alert-model/alert-model.component';
 import { ProjectsComponent } from '../projects/projects.component';
+import { DashboardService } from '../../services/dashboard.service';
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -34,6 +36,7 @@ export class DashboardComponent {
   itemIcons = [faList, faDashboard, faCog, faSignal, faCartShopping,faAdd,faUser,faSignOut];
   isLoadingMenu=false;
   data:any;
+  topHeading="G'Day Ali Hassan"
   projects:any[]=[{
     name:'project 1',
     img:'../..//../assets/Images/project-logo-1.png'  
@@ -53,14 +56,14 @@ export class DashboardComponent {
 
 ]
   
-  // constructor(private dashboardService:DashboardService){
-
-  // }
+  constructor(private dashboardService:DashboardService){}
   toggleSidebar() {
     this.showSidebar = !this.showSidebar;
   }
   ngOnInit() {
-    // jQuery code
+    this.dashboardService.data$.subscribe(value => {
+      this.topHeading = value;
+    });
   }
   sidebarItems = [
     {

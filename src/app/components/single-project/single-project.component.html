@@ -1,1 +1,16 @@
-<p>single-project works!</p>
+
+
+<app-projectfilters></app-projectfilters>
+
+
+
+<div class="project-task-category-containers">
+    <div class="task-category-box" *ngFor="let c of [1,2,3,4,5,6,7]">
+       <p class="category-name">In Progress</p>
+       <div class="tasks-container">
+        <app-skelton-loader></app-skelton-loader>
+   
+       </div>
+       
+    </div>
+</div>

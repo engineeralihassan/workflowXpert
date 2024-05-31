@@ -1,12 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, input } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAdd } from '@fortawesome/free-solid-svg-icons';
+import { SkeltonLoaderComponent } from '../skelton-loader/skelton-loader.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [FontAwesomeModule,CommonModule],
+  imports: [FontAwesomeModule,CommonModule,RouterModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
@@ -29,5 +31,9 @@ export class ProjectsComponent {
   }
 
 ]
-plusIcon=faAdd
+plusIcon=faAdd;
+constructor(private router:Router){}
+openSingleProject(){
+   this.router.navigate(['/dashboard/projects/123'])
+}
 }

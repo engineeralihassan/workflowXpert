@@ -1,5 +1,5 @@
 <div class="data-colums-container" >
-    <div  class="box" *ngFor="let project of projects">
+    <div  class="box" *ngFor="let project of projects" (click)="openSingleProject()">
       <div class="project-img-container">
         <img [src]="project.img" [alt]="project.name">
       </div>

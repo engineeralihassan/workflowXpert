@@ -1,9 +1,15 @@
+.page-wrapper{
+  max-height: 100vh;
+  overflow: hidden;
+}
 .page-content {
     max-width: 100%;
-    background-color: #e8e8e9;
-    min-height: 100vh;
+    background-color: white;
+    max-height: 100vh;
+    overflow: hidden;
     max-width: 100%;
     width: calc(100% - 260px);
+
   }
 
   .user-details-container {

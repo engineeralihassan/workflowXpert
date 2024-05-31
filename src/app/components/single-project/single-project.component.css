@@ -1,0 +1,44 @@
+.project-task-category-containers{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    overflow: scroll;
+    height: 61vh;
+    overflow-y: scroll;
+    padding: 0 2rem;
+    .task-category-box{
+        background-color: #f4f5f7;
+        border-radius: 3px;
+        flex-basis: 22%;
+        min-width: 25%;
+        padding: 10px 5px;
+
+    }
+    .category-name{
+        background-color: transparent;
+        height: 50px;
+        width: 100%;
+        border-radius: 3px 3px 0 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 10px;
+        color: #626f86;
+        font-weight: 700;
+        font-size: 14px;
+        
+    }
+    .tasks-container{
+        margin-top: 1rem;
+        width: 100%;
+        min-height: 43vh;
+        overflow-y: scroll;
+    }
+
+
+
+
+}

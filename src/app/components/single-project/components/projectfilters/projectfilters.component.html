@@ -1,0 +1,24 @@
+<section class="project-filters-container">
+    <div class="search-container">
+        <div class="icon-container"><fa-icon [icon]="icons[0]"></fa-icon></div>
+        <div class="input-container">
+            <input type="text" id="search" placeholder="Search">
+        </div>
+    </div>
+    <div class="team-members-name">
+        <div class="name-box" *ngFor="let name of names" >{{name}}</div>
+    </div>
+    <div class="by-type-filters-container">
+        <div class="dropdown">
+            <button class=" btn dropdown-toggle by-type-filter-dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Type
+            </button>
+            <ul class="dropdown-menu by-type-filter-options" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item">Story</a></li>
+              <li><a class="dropdown-item">Bug</a></li>
+             
+            </ul>
+          </div>
+          
+    </div>    
+</section>

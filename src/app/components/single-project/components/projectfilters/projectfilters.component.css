@@ -1,0 +1,112 @@
+.project-filters-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 2rem;
+    .search-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+        border: 2px solid #8590a2;
+        border-radius: 6px;
+        background-color: #fff;
+        transition: all 0.1s ease;
+        color: #8590a2;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        .icon-container{
+            color: #8590a2;
+            font-size: 1rem;
+        }
+        .input-container{
+            
+            input{
+                width: 100%;
+                transition: all 0.3s ease;
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: #8590a2;
+                font-size: 14px;
+                padding-left: 10px;
+                min-width: 3rem;
+            }
+            input:focus{
+                
+                min-width: 12rem;
+
+            }
+      
+        }
+
+
+
+
+    }
+    .search-container:focus-within {
+        border: 2px solid #0052CC; 
+      }
+
+      .team-members-name{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .name-box{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1rem;
+            position: relative;
+            background-color:#0052CC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+
+        }
+         
+        
+        .name-box:hover{
+            box-shadow: inset 0 0 0 2px #fff;
+              border-style: ;
+              z-index: 2;
+              cursor: pointer;
+        }
+
+      }
+
+      .by-type-filters-container{
+      
+        .by-type-filter-dropdown{
+color: #172b4d ;
+font-size: 14px;
+font-weight: 700;
+        }
+        .by-type-filter-options{
+            li {
+                
+                color: #172b4d;
+                .dropdown-item{
+                    color: #172b4d !important;
+                }
+                .dropdown-item:hover{
+                    color: #172b4d;
+                }
+            }
+        }
+      }
+      .by-type-filter-dropdown:hover{
+        background-color: rgb(235, 235, 238);
+        border: none;
+        outline: none;
+      }
+
+      
+    
+
+
+}
