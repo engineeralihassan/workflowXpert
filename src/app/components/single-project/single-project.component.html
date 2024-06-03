@@ -23,8 +23,18 @@
 ){
     <div class="task-box" >
         <div class="task-upper-section">
-         <p>Stellar website Responsiveness (Footer Pages)</p> 
-         <span><fa-icon class="icon" [icon]="icons[0]"></fa-icon></span>
+         <p type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Stellar website Responsiveness (Footer Pages)</p> 
+         <span  type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
+           
+              
+           
+           
+            
+            <fa-icon class="icon" [icon]="icons[0]"></fa-icon></span>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                <li><a class="dropdown-item" >   <fa-icon [icon]="icons[3]"></fa-icon> Edit Task</a></li>
+                <li><a class="dropdown-item delete-task" >  <fa-icon [icon]="icons[4]"></fa-icon> Delete Task</a></li>
+              </ul>
         </div>
         <div class="task-bottom-section">
          <span class="task-number" title="VGDMS-34"><small> <fa-icon [icon]="icons[1]"></fa-icon></small> VGDMS-34</span>
@@ -33,13 +43,69 @@
  
  
          </div>
+        
 }
+<div class="create-new-task">
+    <fa-icon [icon]="icons[2]"></fa-icon> Create new 
+ </div>
 
       
     }
-        
+       
+
        
    
        </div>
     </div>
 </div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade task-details-model" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="task-modal-header">
+          <p> <img src="../../../assets/Images/story.svg" alt="">VGMS-492</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       
+        <div class="modal-body">
+            <div class="task-description-area">
+            <h3> 
+                CMS | Save Users Feedback and Rating</h3>
+                <p class="description-heading">Description</p>
+
+                <div class="description-text">
+                    <p>The proportions and arrangement of all UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly layout.</p>
+                    <h2>Layout:</h2>
+                    <p>UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly </p>
+                    <h3>Typography:</h3>
+                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
+                    <h4>Typography:</h4>
+                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
+                    <h5>this is topHeading 5</h5>
+
+                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
+                </div>
+                <div class="attachments">
+                    <p>Attachments</p>
+                    <div class="attachment-images">
+                        <img src="../../../assets/Images/project-logo-2.jpeg" alt="" *ngFor="let img of [1,2,3]">
+                    </div>
+                </div>
+                <div class="comments">
+                    <p>Comments</p>
+                    <div class="current-user-comment">
+                        <span class="user-name">AH</span> <input type="text" name="" id="">
+                    </div>
+                    <div class="user-comments"></div>
+                </div>
+            </div>
+            <div class="task-metadata"></div>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+

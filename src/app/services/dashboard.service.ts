@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -8,6 +9,7 @@ export class DashboardService {
 
   private dataSubject = new BehaviorSubject<string>("G'day Ali Hassan");
   data$ = this.dataSubject.asObservable();
+  constructor(private http:HttpClient){}
 
   setData(value: string): void {
     this.dataSubject.next(value);
@@ -15,5 +17,8 @@ export class DashboardService {
 
   getData(): string {
     return this.dataSubject.getValue();
+  }
+  fakeCall(){
+    return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
 }

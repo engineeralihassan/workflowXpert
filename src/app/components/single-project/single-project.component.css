@@ -134,9 +134,205 @@
             width: 97%;
             overflow: hidden;
         }
+        .create-new-task{
+            width: 100%;
+            height: 35px;
+            background-color: transparent;
+            display: flex;
+            color: #626f86;
+            margin-top: 0.3rem;
+            font-weight: 600;
+            padding-left: 10px;
+            cursor: pointer;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 6px;
+            font-size: 15px;
+            fa-icon{
+                margin-right: 6px;
+            }
+        }
+        .create-new-task:hover{
+         background-color:#ebecee;
+        }
     }
+
+ 
 
 
 
 
 }
+.task-crud-actions-dropdown{
+    .dropdown-item{
+        color:#626f86 !important;
+        fa-icon{
+            margin-right: 5px;
+
+        }
+    }
+    .delete-task{
+        color: red;
+    }
+}
+
+    .dropdown-item{
+        color:#626f86 !important;
+        fa-icon{
+            margin-right: 5px;
+            color:#626f86 !important;
+
+
+        }
+    }
+    .delete-task{
+        color: red !important;
+        fa-icon{
+            margin-right: 5px;
+            color: red !important;
+
+
+        }
+
+    }
+
+    .task-details-model{
+        justify-content: center;
+        align-items: center;
+
+        .modal-dialog{
+        max-width: 100vw ;
+            height: 85vh;
+         
+        }
+
+        .modal-content{
+            
+            width: 85vw ;
+            height: 85vh ;
+            margin: auto ;
+            margin-top: 2rem;
+            .task-modal-header{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                p{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    color: #626f86;
+                    font-size: 14px;
+                    font-weight: 400;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+                button{
+                   
+                    padding: 10px;
+                }
+                button:hover{
+                    background-color: #ebecee;
+                    
+                }
+            }
+            .modal-body{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                height: 100%;
+                overflow: scroll;
+                padding: 10px;
+                .task-description-area{
+                    flex-basis: 60%;
+
+                }
+                .task-metadata{
+                    flex-basis: 35%;
+                }
+
+                h3{
+                    color: #172b4D;
+                }
+                .description-heading{
+                    margin-top: 1rem;
+                    color: #172b4D;
+                    font-size: 14px;
+                    font-weight: 700;
+                   
+                }
+                .description-text{
+                    margin-top: 0;
+                    padding:17px;
+                    p{
+                        margin-top: 0.2rem;
+                        color: #172b4D;
+                        font-size: 14px;
+                    }
+                    h2,h3,h4,h5{
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: #172b4d;
+                        font-weight: bold;
+                    }
+                }
+                .description-text:hover{
+                    background-color: #ebecee;
+                    cursor: pointer;
+                }
+
+                .attachments{
+                    p{
+                        margin-top: 1rem;
+                        color: #172b4d;
+                        font-family: 400;
+                    }
+                    .attachment-images{
+                        margin-top: 1rem;
+                        display: flex;
+                        gap: 10px;
+                        img{
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 6px;
+                        }
+                    }
+                }
+                .comments{
+                    margin-top: 1rem;
+                    p{
+                        margin-top: 1rem;
+                        color: #172b4d;
+                        font-family: 400;
+                    }
+                }
+                .current-user-comment{
+                  margin-top: 1rem;
+                  width: 100%;
+                  display: flex;
+                  span{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #0052CC;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-size: 15px;
+                  }
+                  input{
+                    width: 100%;
+                    margin-left: 10px;
+                  }
+                }
+
+            }
+
+        }
+   
+   
+    }
+
