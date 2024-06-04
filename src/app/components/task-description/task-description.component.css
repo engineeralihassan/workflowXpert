@@ -1,0 +1,51 @@
+
+
+h3{
+    color: #172b4D;
+}
+.description-heading{
+    margin-top: 1rem;
+    color: #172b4D;
+    font-size: 14px;
+    font-weight: 700;
+   
+}
+.description-text{
+    margin-top: 0;
+    padding:17px;
+    p{
+        margin-top: 0.2rem;
+        color: #172b4D;
+        font-size: 14px;
+    }
+    h2,h3,h4,h5{
+        font-size: 15px;
+        font-weight: 400;
+        color: #172b4d;
+        font-weight: bold;
+    }
+}
+.description-text:hover{
+    background-color: #ebecee;
+    cursor: pointer;
+}
+
+.attachments{
+    border: 1px solid red;
+    p{
+        margin-top: 1rem;
+        color: #172b4d;
+        font-family: 400;
+    }
+    .attachment-images{
+        border: 1px solid red;
+        margin-top: 1rem;
+        display: flex;
+        gap: 10px;
+        img{
+            min-width: 200px;
+            min-height: 200px;
+            border-radius: 6px;
+        }
+    }
+}

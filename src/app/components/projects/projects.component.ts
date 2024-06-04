@@ -3,7 +3,6 @@ import { Component, Input, input } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAdd } from '@fortawesome/free-solid-svg-icons';
-import { SkeltonLoaderComponent } from '../skelton-loader/skelton-loader.component';
 
 @Component({
   selector: 'app-projects',

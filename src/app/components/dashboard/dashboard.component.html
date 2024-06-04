@@ -1,6 +1,6 @@
 
 
-  <div class="page-wrapper chiller-theme" [ngClass]="{ toggled: showSidebar }">
+  <div class="page-wrapper chiller-theme" [ngClass]="{ toggled: showSidebar }" >
     <a id="show-sidebar" class="btn btn-sm btn-dark" (click)="toggleSidebar()">
       <fa-icon [icon]="faCoffee[2]"></fa-icon>
     </a>
@@ -19,8 +19,8 @@
                 <h4>Ali Hassan</h4>
                 <p>{{'alihassan@vertexitsol.com'}}</p>
               </div></li>
-              <li><a class="dropdown-item" href="#"><fa-icon [icon]="itemIcons[6]"></fa-icon> Profile setting</a></li>
-              <li><a class="dropdown-item" href="#"> <fa-icon [icon]="itemIcons[7]"></fa-icon>Logout</a></li>
+              <li><a class="dropdown-item" routerLink="/profile"><fa-icon [icon]="itemIcons[6]"></fa-icon> Profile setting</a></li>
+              <li><a class="dropdown-item"> <fa-icon [icon]="itemIcons[7]"></fa-icon>Logout</a></li>
             </ul>
           </div>
         </div>

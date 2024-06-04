@@ -245,54 +245,28 @@
                 height: 100%;
                 overflow: scroll;
                 padding: 10px;
-                .task-description-area{
-                    flex-basis: 60%;
-
-                }
+           
                 .task-metadata{
                     flex-basis: 35%;
                 }
-
-                h3{
-                    color: #172b4D;
+                .task-description-area{
+                    flex-basis: 60%;
+                
                 }
-                .description-heading{
-                    margin-top: 1rem;
-                    color: #172b4D;
-                    font-size: 14px;
-                    font-weight: 700;
-                   
-                }
-                .description-text{
-                    margin-top: 0;
-                    padding:17px;
-                    p{
-                        margin-top: 0.2rem;
-                        color: #172b4D;
-                        font-size: 14px;
-                    }
-                    h2,h3,h4,h5{
-                        font-size: 15px;
-                        font-weight: 400;
-                        color: #172b4d;
-                        font-weight: bold;
-                    }
-                }
-                .description-text:hover{
-                    background-color: #ebecee;
-                    cursor: pointer;
-                }
-
                 .attachments{
+                    
                     p{
                         margin-top: 1rem;
                         color: #172b4d;
                         font-family: 400;
                     }
                     .attachment-images{
+                        max-width: 100%;
+                        
                         margin-top: 1rem;
                         display: flex;
                         gap: 10px;
+                        flex-wrap: wrap;
                         img{
                             width: 200px;
                             height: 200px;
@@ -300,34 +274,9 @@
                         }
                     }
                 }
-                .comments{
-                    margin-top: 1rem;
-                    p{
-                        margin-top: 1rem;
-                        color: #172b4d;
-                        font-family: 400;
-                    }
-                }
-                .current-user-comment{
-                  margin-top: 1rem;
-                  width: 100%;
-                  display: flex;
-                  span{
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    background-color: #0052CC;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: #fff;
-                    font-size: 15px;
-                  }
-                  input{
-                    width: 100%;
-                    margin-left: 10px;
-                  }
-                }
+
+         
+           
 
             }
 
@@ -336,3 +285,8 @@
    
     }
 
+    .model-data-loader-container{
+        padding: 20px;
+        margin-top: 2rem;
+    }
+ 

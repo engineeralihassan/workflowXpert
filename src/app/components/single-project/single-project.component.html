@@ -1,6 +1,7 @@
 
 
 <app-projectfilters></app-projectfilters>
+<app-add-task-modal></app-add-task-modal>
 
 
 
@@ -23,7 +24,7 @@
 ){
     <div class="task-box" >
         <div class="task-upper-section">
-         <p type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Stellar website Responsiveness (Footer Pages)</p> 
+         <p (click)="loadTaskData()" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Stellar website Responsiveness (Footer Pages)</p> 
          <span  type="button" id="dropdownMenuButton4" data-bs-toggle="dropdown" aria-expanded="false">
            
               
@@ -45,7 +46,7 @@
          </div>
         
 }
-<div class="create-new-task">
+<div class="create-new-task" type="button" data-bs-toggle="modal" data-bs-target="#addTaskModal">
     <fa-icon [icon]="icons[2]"></fa-icon> Create new 
  </div>
 
@@ -60,6 +61,7 @@
 </div>
 
 
+
   
   <!-- Modal -->
   <div class="modal fade task-details-model" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -69,41 +71,34 @@
           <p> <img src="../../../assets/Images/story.svg" alt="">VGMS-492</p>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-       
-        <div class="modal-body">
-            <div class="task-description-area">
-            <h3> 
-                CMS | Save Users Feedback and Rating</h3>
-                <p class="description-heading">Description</p>
-
-                <div class="description-text">
-                    <p>The proportions and arrangement of all UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly layout.</p>
-                    <h2>Layout:</h2>
-                    <p>UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly </p>
-                    <h3>Typography:</h3>
-                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
-                    <h4>Typography:</h4>
-                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
-                    <h5>this is topHeading 5</h5>
-
-                    <p>they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly UI elements (buttons, images, text boxes, etc.) must be thoroughly tested to ensure they adapt seamlessly to different screen sizes and maintain a visually appealing and user-friendly</p>
-                </div>
-                <div class="attachments">
-                    <p>Attachments</p>
-                    <div class="attachment-images">
-                        <img src="../../../assets/Images/project-logo-2.jpeg" alt="" *ngFor="let img of [1,2,3]">
+        @if(isLoadtaskData){
+            <div class="model-data-loader-container">
+                <app-skelton-loader ></app-skelton-loader>
+            </div>
+        }
+        @else{
+            <div class="modal-body">
+                <div class="task-description-area">
+                    <app-task-description></app-task-description>
+                    <div class="attachments">
+                        <p>Attachments</p>
+                        <div class="attachment-images">
+                            <img src="../../../assets/Images/project-logo-2.jpeg" alt="attachment image" *ngFor="let img of [1,2,3]">
+                        </div>
                     </div>
+                    <app-task-comments></app-task-comments>
+              
+                  
                 </div>
-                <div class="comments">
-                    <p>Comments</p>
-                    <div class="current-user-comment">
-                        <span class="user-name">AH</span> <input type="text" name="" id="">
-                    </div>
-                    <div class="user-comments"></div>
+                <div class="task-metadata">
+                  <app-task-meta></app-task-meta>
                 </div>
             </div>
-            <div class="task-metadata"></div>
-        </div>
+
+        }
+      
+       
+   
     
       </div>
     </div>

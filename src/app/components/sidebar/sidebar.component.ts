@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { ChangeDetectionStrategy, Component, NgModule } from '@angular/core';
 import {
   faBars,
   faCartShopping,
@@ -23,7 +23,8 @@ import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
   standalone: true,
   imports: [FontAwesomeModule,FormsModule,CommonModule,RouterLinkActive,RouterLink,RouterModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.css'
+  styleUrl: './sidebar.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidebarComponent {
   showSidebar = true;

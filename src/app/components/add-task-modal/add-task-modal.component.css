@@ -1,0 +1,88 @@
+.add-task--model{
+    justify-content: center;
+    align-items: center;
+
+    .modal-dialog{
+    max-width: 100vw ;
+    height: 85vh;
+     
+    }
+
+    .modal-content{
+        
+        width: 60vw ;
+        height: 85vh ;
+        margin: auto ;
+        margin-top: 2rem;
+        .task-modal-header{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            p{
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: #626f86;
+                font-size: 14px;
+                font-weight: 400;
+                img{
+                    margin-right: 10px;
+                }
+            }
+            button{
+               
+                padding: 10px;
+            }
+            button:hover{
+                background-color: #ebecee;
+                
+            }
+        }
+        .modal-body{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100%;
+            overflow: scroll;
+            padding: 10px;
+       
+            .task-metadata{
+                flex-basis: 35%;
+            }
+            .task-description-area{
+                flex-basis: 60%;
+            
+            }
+            .attachments{
+                
+                p{
+                    margin-top: 1rem;
+                    color: #172b4d;
+                    font-family: 400;
+                }
+                .attachment-images{
+                    max-width: 100%;
+                    
+                    margin-top: 1rem;
+                    display: flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    img{
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 6px;
+                    }
+                }
+            }
+
+     
+       
+
+        }
+
+    }
+
+
+}

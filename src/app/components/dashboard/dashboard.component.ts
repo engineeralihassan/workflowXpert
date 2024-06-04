@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import {
   faBars,
   faCartShopping,
@@ -16,21 +16,23 @@ import {
 import { faAdd } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidebarComponent } from '../sidebar/sidebar.component';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AlertModelComponent } from '../alert-model/alert-model.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { DashboardService } from '../../services/dashboard.service';
+import { MainLoaderComponent } from '../main-loader/main-loader.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [FontAwesomeModule, SidebarComponent, RouterOutlet,CommonModule,AlertModelComponent,ProjectsComponent],
+  imports: [FontAwesomeModule, SidebarComponent ,RouterLink, RouterOutlet,CommonModule,AlertModelComponent,ProjectsComponent,MainLoaderComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
-  encapsulation:ViewEncapsulation.None
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
+  isLoadingmain:any;
   showSidebar = true;
   faCoffee = [faCoffee, faClose, faBars];
   itemIcons = [faList, faDashboard, faCog, faSignal, faCartShopping,faAdd,faUser,faSignOut];
@@ -56,14 +58,20 @@ export class DashboardComponent {
 
 ]
   
-  constructor(private dashboardService:DashboardService){}
+  constructor(private dashboardService:DashboardService){
+    this.isLoadingmain=true;
+  }
   toggleSidebar() {
     this.showSidebar = !this.showSidebar;
   }
   ngOnInit() {
+    this.isLoadingmain=true;
     this.dashboardService.data$.subscribe(value => {
       this.topHeading = value;
     });
+    setTimeout(()=>{
+      this.isLoadingmain=false;
+    },3000)
   }
   sidebarItems = [
     {
