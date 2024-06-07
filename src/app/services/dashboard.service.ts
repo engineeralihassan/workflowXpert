@@ -21,4 +21,7 @@ export class DashboardService {
   fakeCall(){
     return this.http.get('https://jsonplaceholder.typicode.com/posts')
   }
+  seoTags(){
+    return this.http.get('http://35.168.1.147:8080/api/stellar/seo/home')
+  }
 }
