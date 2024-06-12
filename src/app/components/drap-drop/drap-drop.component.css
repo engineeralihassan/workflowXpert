@@ -1,0 +1,35 @@
+.board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .column {
+    width: 30%;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .task-list {
+    min-height: 100px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .task {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #e1e1e1;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .task:hover {
+    background-color: #d1d1d1;
+  }
+  

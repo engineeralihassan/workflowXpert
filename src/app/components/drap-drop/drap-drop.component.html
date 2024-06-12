@@ -1,0 +1,35 @@
+<!-- <div class="board">
+    <div class="column" *ngFor="let column of columns">
+      <h2>{{ column.name }}</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="column.tasks"
+        class="task-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="task" *ngFor="let task of column.tasks" cdkDrag>
+          {{ task }}
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
+
+
+   <div class="board">
+    <div class="column" *ngFor="let column of columns">
+      <h2>{{ column.name }}</h2>
+      <div
+        cdkDropList
+        [cdkDropListData]="column.tasks"
+        [cdkDropListConnectedTo]="getConnectedDropLists()"
+        class="task-list"
+        (cdkDropListDropped)="drop($event)"
+      >
+        <div class="task" *ngFor="let task of column.tasks" cdkDrag>
+          {{ task }}
+        </div>
+      </div>
+    </div>
+  </div>
+  
